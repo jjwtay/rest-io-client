@@ -11,7 +11,7 @@ export default class RestSocket {
 		})
 	}
 	on(msg, cb) {
-		this.io.on('msg', (data) => {
+		this.io.on(msg, (data) => {
 			cb(data)
 		})
 	}
