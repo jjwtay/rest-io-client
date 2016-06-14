@@ -1,6 +1,6 @@
 {
   "name": "rest-io-client",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Promise based rest-io-router client socket implementation",
   "main": "./build/rest-io-client.js",
   "scripts": {
