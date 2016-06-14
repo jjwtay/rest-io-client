@@ -34,7 +34,7 @@ var RestSocket = function () {
 	_createClass(RestSocket, [{
 		key: 'on',
 		value: function on(msg, cb) {
-			this.io.on('msg', function (data) {
+			this.io.on(msg, function (data) {
 				cb(data);
 			});
 		}
