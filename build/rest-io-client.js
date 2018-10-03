@@ -18,7 +18,7 @@ var RestSocket = function () {
 	function RestSocket(url) {
 		var _this = this;
 
-		var options = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+		var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
 		_classCallCheck(this, RestSocket);
 
@@ -41,46 +41,46 @@ var RestSocket = function () {
 	}, {
 		key: 'get',
 		value: function get(url) {
-			var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-			var query = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
+			var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+			var query = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
 			return this.request("get", url, params, query);
 		}
 	}, {
 		key: 'post',
 		value: function post(url) {
-			var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-			var query = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
+			var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+			var query = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
 			return this.request("post", url, params, query);
 		}
 	}, {
 		key: 'put',
 		value: function put(url) {
-			var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-			var query = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
+			var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+			var query = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
 			return this.request("put", url, params, query);
 		}
 	}, {
 		key: 'delete',
 		value: function _delete() {
-			var url = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-			var params = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
-			var query = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
+			var url = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+			var params = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+			var query = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
 			return this.request("delete", url, params, query);
 		}
 	}, {
 		key: 'request',
 		value: function request() {
-			var method = arguments.length <= 0 || arguments[0] === undefined ? "get" : arguments[0];
+			var method = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "get";
 			var url = arguments[1];
 
 			var _this2 = this;
 
-			var params = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
-			var query = arguments.length <= 3 || arguments[3] === undefined ? {} : arguments[3];
+			var params = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+			var query = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : {};
 
 			return new Promise(function (resolve, reject) {
 				var guid = generateGuid();
