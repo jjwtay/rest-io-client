@@ -1,11 +1,11 @@
 {
   "name": "rest-io-client",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Promise based rest-io-router client socket implementation",
   "main": "./build/rest-io-client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --presets babel-preset-es2015 --out-dir build"
+    "build": "babel src --out-dir build"
   },
   "repository": {
     "type": "git",
@@ -18,12 +18,11 @@
   },
   "homepage": "https://github.com/jjwtay/rest-io-client#readme",
   "dependencies": {
-    "babel": "^6.5.2",
-    "babel-cli": "^6.9.0",
-    "babel-core": "^6.9.1",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.9.0",
-    "socket.io-client": "^2.1.1",
-    "webpack": "^1.13.1"
+    "socket.io-client": "^2.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1"
   }
 }
