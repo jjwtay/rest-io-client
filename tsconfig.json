@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "declarationDir": "build",
+        "lib": ["ES2016", "ES2015", "DOM"],
+        "esModuleInterop": true
+    }
+}

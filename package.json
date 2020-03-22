@@ -5,7 +5,7 @@
   "main": "./build/rest-io-client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir build"
+    "build": "rm -rf build && npx rollup --config"
   },
   "repository": {
     "type": "git",
@@ -18,11 +18,13 @@
   },
   "homepage": "https://github.com/jjwtay/rest-io-client#readme",
   "dependencies": {
-    "socket.io-client": "^2.1.1"
+    "socket.io-client": "^2.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.3.3",
-    "@babel/preset-env": "^7.3.1"
+    "@types/socket.io-client": "^1.4.32",
+    "rollup": "^2.1.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
   }
 }
